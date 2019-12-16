@@ -4,6 +4,9 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+import {
+	withRouter
+} from 'react-router-dom';
 import Display from "./Display";
 
 import styles from './style.css';
@@ -30,7 +33,7 @@ export default class Login extends Component
     {
         // this.setState({nameError:'',emailError:''})
         alert("name submitted");
-        event =>  window.location.href='/Display'
+       this.props.history.push('/Display');
     }
       event.preventDefault();
   }

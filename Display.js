@@ -31,4 +31,4 @@ class Display extends Component {
   }
 }
  
-export default Main;
+export default Display;
