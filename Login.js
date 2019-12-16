@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+import Display from "./Display";
 
 import styles from './style.css';
 
@@ -24,6 +30,7 @@ export default class Login extends Component
     {
         // this.setState({nameError:'',emailError:''})
         alert("name submitted");
+        event =>  window.location.href='/Display'
     }
       event.preventDefault();
   }
@@ -77,11 +84,6 @@ export default class Login extends Component
         <b>Password:</b><br /><input type="password" name="password"  onChange={this.handleChange} value={this.state.password}/>
         <div style={{color:'red'}}> {this.state.passwordError} </div>
         <br />
-
-       
-
-
-
         <input type="submit" name="submit"/>
       </div>
       </form>
