@@ -3,8 +3,6 @@ import { render } from "react-dom";
 import "./style.css";
 import Login from "./Login";
 
-
-
 class Logout extends Component {
   constructor() {
     super();
@@ -16,7 +14,7 @@ class Logout extends Component {
   render() {
     return (
       <div>
-        <Login/>
+        <Login />
       </div>
     );
   }
