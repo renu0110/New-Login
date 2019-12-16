@@ -6,6 +6,7 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+import Logout from './Logout';
 
 
 
@@ -22,6 +23,13 @@ class HelloRenu extends Component {
       <div>
         <h1>Renuka</h1>
         <NavLink exact to="/Logout">Logout</NavLink>
+        <HashRouter history = {history}>
+       
+
+  <Route exact path="/Logout" component={Logout}/>
+
+      
+      </HashRouter>
       </div>
     );
   }
