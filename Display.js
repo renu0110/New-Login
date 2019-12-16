@@ -1,31 +1,26 @@
 import React, { Component } from "react";
+import Login from './Login';
 
+import Logout from './Logout';
+import HelloRenu from './HelloRenu';
 import {
   Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Home from "./Home";
-import Stuff from "./Stuff";
-import Contact from "./Contact";
+
+
  
 class Display extends Component {
   render() {
     return (
-      <HashRouter>
-        <div>
-          <h1>Simple SPA</h1>
-          <ul className="header">
-            <li><NavLink exact to="/home">Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
-         <div className="content">
-  <Route exact path="/home" component={Home}/>
-  <Route path="/stuff" component={Stuff}/>
-  <Route path="/contact" component={Contact}/>
-</div>
-        </div>
+      <HashRouter history = {history}>
+       
+  <Route exact path="/" component={Login}/>
+  <Route exact path="/HelloRenu" component={HelloRenu}/>
+  <Route exact path="/Logout" component={Logout}/>
+
+      
       </HashRouter>
     );
   }
